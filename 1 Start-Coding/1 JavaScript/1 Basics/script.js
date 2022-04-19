@@ -55,4 +55,6 @@ console.log("Hola " + nombre);
 
 console.log(confirm("Estas seguro?"));
 
+//TODO: Video 8
+
 //
