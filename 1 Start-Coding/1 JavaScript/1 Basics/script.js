@@ -90,4 +90,32 @@ let otroNumber = 3;
 console.log(string + number); //Concatena, xq tiene uno q es string
 console.log(otroNumber + number + string); //Recibe 52, primero suma los dos numeros y despues lo convierte a string concatenando
 
+//TODO: Video 10
+
+//Aritmeticos
+console.log(typeof "Hola");
+console.log(+"123"); //Convierte en Numero
+console.log(-"123"); //Convierte en Numero y niega
+console.log(+"tres"); //NaN
+
+console.log(2 + 3);
+console.log(2 - 3);
+console.log(2 / 3);
+console.log(2 * 3);
+console.log(2 % 3);
+
+//Logicos
+console.log(2 < 3); //True
+console.log(2 > 3); //False
+console.log(2 >= 2);
+console.log(2 === 2); //Comparacion estricta = Compara tipo y valor (2 === "2") --> False lo mismo con !==
+console.log(2 == 2); //Comparacion no estricta = solo compara valor (2 == "2") --> True lo mismo con !=
+
+console.log(2 === 2 && 2 > 0);
+console.log(2 === 2 || 2 < 0);
+
+let edad = 18;
+
+console.log(edad >= 18 ? "Podes manejar" : "No tenes edad para manejar"); //Como un IF-ELSE pero solo en una linea
+
 //
