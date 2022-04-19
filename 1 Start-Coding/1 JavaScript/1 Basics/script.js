@@ -26,4 +26,33 @@ console.log(null);
 let myVariable = null;
 console.log(myVariable);
 
+//TODO: Video 7
+
+let miVariable = 3;
+console.log(miVariable);
+console.log(2 + 3);
+
+function saludar() {
+    return "Hola";
+}
+
+console.log(saludar());
+
+let mi_variable = true;
+
+if (mi_variable) {
+    console.log("Verdadero");
+} else {
+    console.log("Falso");
+}
+
+//De Navegador
+alert("Hola we");
+
+let nombre = prompt("Ingresa tu nombre: ");
+
+console.log("Hola " + nombre);
+
+console.log(confirm("Estas seguro?"));
+
 //
