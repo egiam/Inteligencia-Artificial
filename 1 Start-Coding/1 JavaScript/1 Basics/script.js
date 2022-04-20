@@ -118,4 +118,71 @@ let edad = 18;
 
 console.log(edad >= 18 ? "Podes manejar" : "No tenes edad para manejar"); //Como un IF-ELSE pero solo en una linea
 
+//La asociacion se hace de derecha a izquierda
+
+//Variable: Caja en donde vamos a guardar un valor
+// var | let | const
+var variableVar = 1; //
+let variableLet = 3; //El valor se puede cambiar
+const variableConst = 5; //El valor no se puede cambiar, es constante
+
+//Template Literals
+
+const firstName = "Alexis";
+const job = "Desarrollador";
+const favouriteNumber = 7;
+
+//Hola, soy Alexis, soy Desarrollador
+//y mi numero favorito es el 7
+
+console.log(
+    "Hola, soy" +
+    " " +
+    firstName +
+    ", soy " +
+    job +
+    "y mi numero favorito es el " +
+    favouriteNumber
+);
+
+console.log(
+    `Hola, soy ${firstName},
+    soy ${job} y
+    mi numero favorito es el ${3 + 4}`
+);
+
+console.log("I'm");
+
+//Ej 1
+const nombreUsuario = prompt("Coloque su nombre: ");
+console.log(`Hola ${nombreUsuario}`);
+
+//Ej2
+console.log(prompt("Ingrese un numero: ") + prompt("Ingrese otro numero: "));
+
+//Ej3
+console.log(
+    (prompt("Ingrese un numero: ") + prompt("Ingrese otro numero: ")) * 2
+);
+
+//Ej 4
+console.log(prompt("Ingrese el ancho: ") * prompt("Ingrese el alto: "));
+
+//Ej 5
+console.log(prompt("Ingrese su nombre: ").lower());
+
+//Ej 6
+console.log(prompt("Ingrese su apellido: ").toUpperCase());
+
+//Ej 7
+const nameUser = prompt("Su nombre: ");
+const lastName = prompt("Su apellido: ");
+const ageUser = prompt("Su edad: ");
+
+console.log(
+    `Nombre: ${nameUser}
+    Apellido: ${lastName}
+    Edad: ${ageUser}`
+);
+
 //
