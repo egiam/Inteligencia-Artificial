@@ -46,4 +46,12 @@ switch (weather.toUpperCase()) {
         break;
 }
 
+//Vid 3
+
+//FOR
+
+for (let i = 0; i <= 5; i++) {
+    console.log(i);
+}
+
 //
