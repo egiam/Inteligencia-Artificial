@@ -54,4 +54,22 @@ for (let i = 0; i <= 5; i++) {
     console.log(i);
 }
 
+//Vid 4
+
+//While y Do while
+
+number = 0;
+
+do {
+    console.log("Con un Do While ", nmber);
+    number++;
+} while (number < 1);
+
+number = 0;
+
+while (number < 1) {
+    console.log("Con while ", number);
+    number++;
+}
+
 //
