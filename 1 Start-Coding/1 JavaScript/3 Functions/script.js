@@ -1,3 +1,31 @@
+function gradingStudents(grades) {
+    // Write your code here
+    let int = [];
+    for (let num of grades) {
+        let b = Math.floor(num / 5);
+        //console.log(b);
+        let c = (b + 1) * 5;
+        //console.log(c);
+
+        if (c - num < 3 && c % 5 == 0 && num / 5 > 1 && num >= 38) {
+            int.push(c);
+        } else {
+            int.push(num);
+        }
+
+        //else {
+        //  if((c-num<=3)&&((num/5)>1)) {
+        //    int.push(num);
+        //  } else {
+        //    if ((c-num)>3) {
+        //      int.push(num);
+        //    }
+        //  }
+        //}
+    }
+    return int;
+}
+
 //Vid 1
 
 function sum(num1, num2) {
