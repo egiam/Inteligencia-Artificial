@@ -48,4 +48,53 @@ nombres.forEach((item) => {
     console.log(item);
 });
 
+//Vid 5
+// MAP
+
+//Sin map
+const newArray = [];
+
+miArray.forEach((name) => {
+    const newString = `Nombre: ${name}`;
+    console.log(newString);
+    newArray.push(newString);
+});
+
+console.log(newArray);
+
+// //Con map
+
+const newArrayWithMap = miArray.map((name) => `Nombre: ${name}`);
+
+console.log(newArrayWithMap);
+
+//FILTER; // Filter te devuelve un array con todas las condiciones puestas
+const namesArray = [
+    "Alexis",
+    "Juan",
+    "Armando",
+    "Pedro",
+    "Marcelo",
+    "Luis",
+    "Armando",
+    "Alexis",
+    "Martina",
+    "Armando",
+    "Alexis",
+];
+
+const filteredArray = namesArray.filter((name) => name === "Nicolas");
+
+console.log(filteredArray);
+
+//find
+
+const existingElements = namesArray.find((name) => name === "Alexis"); //Find = te devuelve el primer valor que cumpla la condicion
+
+if (existingElements) {
+    console.log("El nombre esta en la lista.");
+} else {
+    console.log("El nombre no esta en la lista.");
+}
+
 //
