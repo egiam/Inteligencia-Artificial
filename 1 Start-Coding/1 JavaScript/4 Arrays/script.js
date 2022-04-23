@@ -97,4 +97,35 @@ if (existingElements) {
     console.log("El nombre no esta en la lista.");
 }
 
+//Vid 5
+
+const numbers = [10, 20, 30, 40];
+
+const orderedArray = nombres.sort(); //Ordenado x orden alfabetico
+console.log(orderedArray.reverse()); //Reverse: de atras para adelante
+
+//Sin reduce
+
+// let total = 0;
+
+// numbers.forEach((number) => (total += number));
+
+//Con reduce
+
+const total = numbers.reduce((acumulador, valorActual) => {
+    console.log("Acumulador", acumulador);
+    console.log("Valor actual", valorActual);
+    console.log("Aca termina la iteracion.");
+
+    return acumulador + valorActual;
+}, 0); //(() => {}, valor inicial del que quiero partit)
+
+const total1 = numbers.reduce(
+    (acumulador, valorActual) => acumulador + valorActual,
+    0
+);
+
+console.log(total);
+console.log(total1);
+
 //
