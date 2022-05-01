@@ -349,5 +349,101 @@ const getRepositoriesFromOwner = async() => {
 
 getRepositoriesFromOwner();
 
+// Protocolo HTTP
+
+// GET, POST, PUT, DELETE
+
+// GET => Solicitar datos o informacion al servidor
+// POST => Enviar informacion al servidor
+// PUT => Modificar informacion en el servidor.
+// DELETE => Borrar informacion del servidor.
+
+//GET
+// fetch("https://jsonplaceholder.typicode.com/posts/10")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+// fetch("https://jsonplaceholder.typicode.com/posts")
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//POST
+
+// fetch("https://jsonplaceholder.typicode.com/posts", {
+//   method: "POST",
+//   body: JSON.stringify({
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//PUT
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PUT",
+//   body: JSON.stringify({
+//     id: 1,
+//     title: "foo",
+//     body: "bar",
+//     userId: 1,
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//PATCH => Actualiza parcialmente el recurso
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "PATCH",
+//   body: JSON.stringify({
+//     title: "foo",
+//   }),
+//   headers: {
+//     "Content-type": "application/json; charset=UTF-8",
+//   },
+// })
+//   .then((response) => response.json())
+//   .then((json) => console.log(json));
+
+//DELETE
+
+// fetch("https://jsonplaceholder.typicode.com/posts/1", {
+//   method: "DELETE",
+// });
+
+//JSON
+//Metodos
+
+// const body = {
+//   id: 1,
+//   title: "foo",
+//   body: "bar",
+//   userId: 1,
+// };
+
+// console.log(typeof body);
+
+// Convertir a JSON
+
+// const parsedBody = JSON.stringify(body);
+
+// console.log(body);
+// console.log(parsedBody);
+
+//Convertir JSON a JS
+
+// const bodyToJS = JSON.parse(parsedBody);
+
+// console.log(bodyToJS);
+
 
 //
