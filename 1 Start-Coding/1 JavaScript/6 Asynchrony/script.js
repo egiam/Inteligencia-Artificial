@@ -85,6 +85,8 @@ const pagarConTarjeta = (precio, isConected) =>
         }, 3000);
     });
 
+//TODO: .then y .catch
+
 console.log(
     pagarConTarjeta(10000, true)
     .then((respuesta) => {
@@ -94,5 +96,64 @@ console.log(
     .catch((error) => console.log(error)) //En caso de error en la promesa
 );
 console.log("Otra tarea");
+
+//
+
+const pagarConTarjeta = (precio, isConected) =>
+    new Promise((resolve, reject) => {
+        const limite = 10000;
+        console.log("Procesando el pago");
+        if (!isConected) return;
+        setTimeout(() => {
+            if (precio <= limite) resolve("Compra Aprobada");
+            else reject("Compra Rechazada");
+        }, 3000);
+    });
+
+async function procesarPago() {
+    const respuesta = await pagarConTarjeta(100, true); //Espera a q se resuelva esto, y despues hace el resto
+
+    console.log(respuesta);
+}
+
+async function procesarPago1()
+try {
+    const respuesta = await pagarConTarjeta(100000, true)
+    console.log(respuesta);
+} catch (error) {
+    console.log(error);
+}
+
+const allPromises = [pagarConTarjeta(150, true), pagarConTarjeta(50, true), pagarConTarjeta(100, true)];
+
+Promise.all(allPromises); //Espera q todas las promesas se resuelvan, y ejecuta con la misma logica, pero si una tira un error, directamente va a fallar
+
+async function procesarPago2() {
+    try {
+        const respuesta = await Promise.all(allPromises);
+        console.log(respuesta);
+        return "Todas resueltas"
+    } catch (error) {
+        console.log(error);
+    }
+}
+
+console.log(procesarPago2().then(response => console.log(response)));
+
+//FETCH
+
+const getDataFromApi = async() => {
+    try {
+        const response = await fetch('https://jsonplaceholder.typicode.com/todos/1');
+        const jsonResponse = await response.json(); //json = JaaScript Object Notation --> Se utiliza para enviar y recibir data de HTTP
+        //json es una promesa tambien
+
+        return jsonResponse;
+    } catch (error) {
+        console.log("error =>", error)
+    }
+};
+
+console.log(getDataFromApi().then(response => console.log(response)));
 
 //
