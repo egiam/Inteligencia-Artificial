@@ -359,91 +359,91 @@ getRepositoriesFromOwner();
 // DELETE => Borrar informacion del servidor.
 
 //GET
-// fetch("https://jsonplaceholder.typicode.com/posts/10")
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
+fetch("https://jsonplaceholder.typicode.com/posts/10") //Si no le decimos que method usar, automaticamente se toma como GET
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
-// fetch("https://jsonplaceholder.typicode.com/posts")
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
+fetch("https://jsonplaceholder.typicode.com/posts")
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 //POST
 
-// fetch("https://jsonplaceholder.typicode.com/posts", {
-//   method: "POST",
-//   body: JSON.stringify({
-//     title: "foo",
-//     body: "bar",
-//     userId: 1,
-//   }),
-//   headers: {
-//     "Content-type": "application/json; charset=UTF-8",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
+fetch("https://jsonplaceholder.typicode.com/posts", {
+        method: "POST", //se pone Post para identificar q es ese metodo 
+        body: JSON.stringify({
+            title: "foo",
+            body: "bar",
+            userId: 1,
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 //PUT
 
-// fetch("https://jsonplaceholder.typicode.com/posts/1", {
-//   method: "PUT",
-//   body: JSON.stringify({
-//     id: 1,
-//     title: "foo",
-//     body: "bar",
-//     userId: 1,
-//   }),
-//   headers: {
-//     "Content-type": "application/json; charset=UTF-8",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+        method: "PUT", //se pone Put para identificar q es ese metodo 
+        body: JSON.stringify({
+            id: 1,
+            title: "foo",
+            body: "bar",
+            userId: 1,
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 //PATCH => Actualiza parcialmente el recurso
 
-// fetch("https://jsonplaceholder.typicode.com/posts/1", {
-//   method: "PATCH",
-//   body: JSON.stringify({
-//     title: "foo",
-//   }),
-//   headers: {
-//     "Content-type": "application/json; charset=UTF-8",
-//   },
-// })
-//   .then((response) => response.json())
-//   .then((json) => console.log(json));
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+        method: "PATCH", //se pone Patch para identificar q es ese metodo 
+        body: JSON.stringify({
+            title: "foo",
+        }),
+        headers: {
+            "Content-type": "application/json; charset=UTF-8",
+        },
+    })
+    .then((response) => response.json())
+    .then((json) => console.log(json));
 
 //DELETE
 
-// fetch("https://jsonplaceholder.typicode.com/posts/1", {
-//   method: "DELETE",
-// });
+fetch("https://jsonplaceholder.typicode.com/posts/1", {
+    method: "DELETE", //se pone Delete para identificar q es ese metodo 
+});
 
-//JSON
+//JSON - json no es JS
 //Metodos
 
-// const body = {
-//   id: 1,
-//   title: "foo",
-//   body: "bar",
-//   userId: 1,
-// };
+const body = {
+    id: 1,
+    title: "foo",
+    body: "bar",
+    userId: 1,
+};
 
-// console.log(typeof body);
+console.log(typeof body);
 
 // Convertir a JSON
 
-// const parsedBody = JSON.stringify(body);
+const parsedBody = JSON.stringify(body); //Convierte de JS a json
 
-// console.log(body);
-// console.log(parsedBody);
+console.log(body);
+console.log(parsedBody);
 
 //Convertir JSON a JS
 
-// const bodyToJS = JSON.parse(parsedBody);
+const bodyToJS = JSON.parse(parsedBody); //Convierte de json a JS
 
-// console.log(bodyToJS);
+console.log(bodyToJS);
 
 
 //
