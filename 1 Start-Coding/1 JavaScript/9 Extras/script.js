@@ -185,3 +185,14 @@ const dni = document.querySelector("#input-nombre").value; // 'Juan   ';
 console.log(nombre1.trim()); // 'Juan'// "23.345.678"
 
 console.log(dni.replaceAll(".", "")); // 23345898
+
+// cd hasta 9 extras
+//node script.js
+console.log("Hola Node");
+
+//npm init
+//npm install dayjs
+
+const dayjs = require("dayjs");
+
+dayjs().format("DD-MM-YYYY");

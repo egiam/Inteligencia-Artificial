@@ -1,0 +1,5 @@
+// cd hasta el lugar adecuado
+
+//npm init
+//npm install dayjs
+//npm install ...
