@@ -1,0 +1,18 @@
+
+Instalar nodejs
+
+node -v
+npm -v
+
+en terminal:
+ir a donde es con cd
+npx create-react-app [nombre-de-app]
+
+cd [nombre app]
+
+npm start
+
+instalar bootstrap:
+npm install bootstrap
+Dentro del app.jsx
+import 'bootstrap/dist/css/bootstrap.css';
