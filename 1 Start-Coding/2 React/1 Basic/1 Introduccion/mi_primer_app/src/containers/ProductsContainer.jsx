@@ -1,45 +1,58 @@
 import CardComponent from "../component/CardComponent";
+import { useContext, useEffect, useState } from 'react';
+import InfoBarComponent from "../component/InfoBar"
+import { EcommerceContext } from "../context/EcommerceContext";
 
 const ProductsContainer = () => {
-  let resultado = 3300 + 2200;
+  // const [ carrito, setCarrito ] = useState([]); //Hook
+  const { products, carrito, setCarrito } = useContext(EcommerceContext);
+
+
+  // setProducts([{id: 1, name: 'shoes'}]); //Genera un bucle infinito
+  useEffect(() => {
+
+    //Se usa para montar un componente. Cuando todavia no se creo el componente pero esta por crearse.
+    //Deberia haber la llamada a una API
+    // const data = [
+    //   {id: 1, name: 'shoes', img:"https://www.marthadebayle.com/wp-content/uploads/2021/07/Dia-mundial-del-perro.jpg"},
+    //   {id: 2, name: 'shirt', img:"https://www.marthadebayle.com/wp-content/uploads/2021/07/Dia-mundial-del-perro.jpg"},
+    //   {id: 3, name: 'book', img:"https://www.marthadebayle.com/wp-content/uploads/2021/07/Dia-mundial-del-perro.jpg"},
+    // ];
+    // setProducts(data);
+
+    //Return: para cuando se esta por morir ese componente
+    return () => {
+      console.log("Se esta x morir el componente");
+    }
+  }, []);
+
+  const AgregarAlCarrito = (event, product) => {
+    carrito.push(product);
+    setCarrito([...carrito]);
+    console.log(carrito);
+}
+
+  // Separar componentes de su funcionalidad
+  
   return (
-    <div className="container">
-      <div className="row">
-        <CardComponent
-          title={"Hola mundo"}
-          img={
-            "https://www.marthadebayle.com/wp-content/uploads/2021/07/Dia-mundial-del-perro.jpg"
-          }
-          resultado={resultado}
-        />
-        <CardComponent
-          title={"Maiameee"}
-          img={
-            "https://www.purina-latam.com/sites/g/files/auxxlc391/files/styles/large/public/purina-reconocer-a-un-perro-feliz.jpg?itok=aX1bmygl"
-          }
-          resultado={resultado}
-        />
-        <CardComponent
-          title={"Hamaica"}
-          img={
-            "https://sumedico.blob.core.windows.net/images/2021/04/14/posturasqueindicanqueunperroesfeliz-focus-0.04-0.2-640-384.jpg"
-          }
-          resultado={resultado}
-        />
-        <CardComponent
-          title={"Sebastian"}
-          img={
-            "https://www.dogalize.com/wp-content/uploads/2015/12/16007c13-3e81-4b65-acba-d347435c764d.jpg"
-          }
-          resultado={resultado}
-        />
-        <CardComponent
-          title={"Locos por el amor"}
-          img={
-            "https://www.mdzol.com/u/fotografias/m/2021/6/2/f608x342-1064707_1094430_15.jpg"
-          }
-          resultado={resultado}
-        />
+    <div className="container bg-warning">
+
+      <InfoBarComponent carrito = {carrito}/>
+
+      <div className="row px-2 py-2">
+        {products.map((element, index) => {
+            return (
+              <div key={index} className="col-4">
+                <CardComponent product={element} agregarAlCarrito={AgregarAlCarrito} />
+              </div>
+            )
+        })}
+
+        {/* {products.map(element => {
+          return (
+              <CardComponent title={element.name} img={element.img} AgregarAlCarrito = {AgregarAlCarrito} />
+          )
+        })} */}
       </div>
     </div>
   );

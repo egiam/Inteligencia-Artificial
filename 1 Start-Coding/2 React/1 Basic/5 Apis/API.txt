@@ -1,0 +1,1 @@
+Api: intermediario entre la comunicacion de el frontend y el backend
