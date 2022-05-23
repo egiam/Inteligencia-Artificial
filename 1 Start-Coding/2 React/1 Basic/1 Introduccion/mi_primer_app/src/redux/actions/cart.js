@@ -1,4 +1,8 @@
-export const addElementToCart = (product) => ({
-    type: "PUSH NEW PRODUCT",
-    payload: product,
-});
+const addElementToCart = (product) => {
+    return {
+        type: "PUSH NEW PRODUCT",
+        payload: product,
+    };
+};
+
+export default addElementToCart;
