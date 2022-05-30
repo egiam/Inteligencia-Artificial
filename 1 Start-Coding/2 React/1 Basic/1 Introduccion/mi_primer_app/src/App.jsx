@@ -11,7 +11,7 @@ import { useDispatch, useSelector } from "react-redux";
 import addElementToCart from "./redux/actions/cart";
 
 function App() {
-  const STATE = useSelector((state) => state.cartReducer);
+  const STATE = useSelector((state) => state.cartReducer); //Redux state hook
   const dispatch = useDispatch(); //Dispara acciones
 
   return (
